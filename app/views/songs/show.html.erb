@@ -5,8 +5,8 @@
 <h2>Artist: <%=@song.artist_name%></h2>
 <h2>Genre: <%=@song.genre%></h2><br>
 
-<br><button><%= link_to "Edit Song", edit_song_path(@song) %></button>
+<%= button_to "Edit Song", edit_song_path(@song), method: :get %>
 
-<button><%= link_to "Delete Song", song_path(@song), method: :delete %></button>
+<%= button_to "Delete Song", song_path(@song), method: :delete %>
 
-<button><%= link_to "Return to Song Index", songs_path %></button>
+<%= button_to "Return to Song Index", songs_path, method: :get %>

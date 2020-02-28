@@ -8,7 +8,7 @@
     <br><%= f.label :released %>
     <%= f.select :released, [['Released', true], ['Unreleased', false]]%><br>
 
-    <br><%= f.label :release_year %>
+    <br><%= f.label "Release Year" %>
     <%= f.text_field  :release_year %><br>
 
     <br><%= f.label :artist_name %>
@@ -20,6 +20,8 @@
     <br><%= f.submit "Update Song" %>
 
 <% end %>
+
+<%= button_to "Cancel Update", song_path(@song), method: :get %>
 
 <% if @song.errors.any? %>
     <p>Please resolve the following issues to Update your Song:</p>
